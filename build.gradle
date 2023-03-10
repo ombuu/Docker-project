@@ -42,6 +42,8 @@ test {
 	useJUnitPlatform()
 }
 
+// jacoco를 통해서 기본적인 정적 분석에 대한 스캔을 진행하고, 
+// 코드의 품질에 대한 기반을 마련할 수 있는 부분에 대해서도 명시를 해놔서 reporting을 할 수 있도록 설정
 jacoco{
   toolVersion = "0.8.7"
 }
@@ -54,6 +56,7 @@ jacocoTestReport {
  }
 }
 
+//jacoco를 기반으로 리포팅이 만들어진것을 sonarqube를 통해 리포팅 결과를 출력하고, 어떤 부분에서 품질에 문제가 되는지 확인
 sonarqube {
   properties {
       property "sonar.projectName","update-docker-mini-project"
