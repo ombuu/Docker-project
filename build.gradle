@@ -14,6 +14,8 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+// 젠킨스를 통해 빌드를 진행할 때, spring 웹 앱을 컴파일 빌드 하기 위해 nexus-artifact-repository를 url로 설정해서 이브러리나 종속성, plugin들을 가져올수 있도록 설정
+// http이므로 allowInsecureProtocol true 상태로 설정
 repositories {
     maven {
         url "http://172.31.3.122:8081/repository/nexus-artifact-repository"
@@ -58,11 +60,11 @@ sonarqube {
       property "sonar.exclusions", "**/generated-*/**/*"
       property "sonar.projectKey", "org.sonarqubeJacocoCodeCoverage"
       property "sonar.reportPath" , "${project.buildDir}/jacoco/test.exec"
-      property "sonar.host.url", "http://<SonarQube Private IP>:9000"
+      property "sonar.host.url", "http://172.31.3.122:9000"
       property "sonar.sources", "src/main/java"
       property "sonar.tests", "src/test/java"
-      property "sonar.login", "<SonarQube ID>"
-      property "sonar.password", "<SonarQube PW>"
+      property "sonar.login", "test"
+      property "sonar.password", "!test00"
   }
 }
 
@@ -71,7 +73,7 @@ tasks['sonarqube'].dependsOn test
 
 jib {
   from {
-    image = "<Nexus Private IP>:5000/<Nexus Repository Name>:<Image Tag Name>"
+    image = "172.31.3.122:5000/test:base-image"
   }
   allowInsecureRegistries = true
 	container {
