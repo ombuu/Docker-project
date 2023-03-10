@@ -16,7 +16,7 @@ dependencies {
 
 repositories {
     maven {
-        url "http://172.31.3.122:8081/nexus-artifact-repository"
+        url "http://172.31.3.122:8081/repository/nexus-artifact-repository"
         allowInsecureProtocol true
     }
 
