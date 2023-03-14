@@ -1,5 +1,11 @@
 # Docker-project
 
+### 프로젝트 노션
+
+👉 [![Notion Badge](http://img.shields.io/badge/-Notion-000000?style=flat&logo=Notion&logoColor=white&link=https://www.notion.so/Docker-CI-CD-47cb03c526bf49e9904d74077fe00a30?pvs=4)](https://www.notion.so/Docker-CI-CD-47cb03c526bf49e9904d74077fe00a30?pvs=4)
+[![Notion Badge](http://img.shields.io/badge/-Notion-FFFFFF?style=flat&logo=Notion&logoColor=black&link=https://www.notion.so/Docker-CI-CD-47cb03c526bf49e9904d74077fe00a30?pvs=4)](https://www.notion.so/Docker-CI-CD-47cb03c526bf49e9904d74077fe00a30?pvs=4)
+👈
+
 ![docker 아키텍처](https://user-images.githubusercontent.com/77061427/224256479-09f81f89-eaa5-453c-8682-48301204f8a4.png)
 
 ## 프로젝트 기간
